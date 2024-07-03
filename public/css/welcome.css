@@ -108,21 +108,28 @@
     font-style: italic;
 }
 
-.mainTitle {
+h1 {
     font-size: 3em !important;
-    margin-top: -200px !important;
     font-family: "Fira Sans Condensed", sans-serif;
     color: skyblue;
 }
 
-body {
-    background-color: rgba(0, 0, 0, 0.8);
+.mainTitle {
+    margin-top: -200px !important;
+}
+
+body,
+.loginDiv {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navWelcome {
+    margin: 0 auto;
+    padding: 50px;
 }
 
 nav {
-    margin: 0 auto;
-    padding: 50px;
-    background-color: skyblue;
+    background-color: skyblue !important;
 }
 
 nav a {
@@ -130,6 +137,19 @@ nav a {
     transition: 0.4s color ease-in-out !important;
 }
 
-nav a:hover {
+.navWelcome a {
+    font-size: 1.2em;
+}
+
+.navWelcome a:hover {
     color: steelblue !important;
+}
+
+/* login page styles */
+label {
+    color: white !important;
+}
+
+#aForgot {
+    color: steelblue;
 }

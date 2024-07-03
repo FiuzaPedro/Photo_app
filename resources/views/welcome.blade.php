@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Photo App</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -25,7 +25,7 @@
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">                    
                     <header class="grid  items-center gap-2 py-10">                        
                         @if (Route::has('login'))
-                            <nav>
+                            <nav class="navWelcome">
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"

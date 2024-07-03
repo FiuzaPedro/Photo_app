@@ -1,0 +1,30 @@
+@import url('welcome.css');
+
+.dashboard {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+nav a {
+    border-bottom-color: white !important;
+}
+
+button,
+button * {
+    background-color: steelblue !important;
+    color: white !important;
+}
+
+.rounded-md {
+    background-color: steelblue !important;
+}
+
+.rounded-md a:hover {
+    color: skyblue !important;
+    background-color: white;
+}
+
+.dashboardContent {
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: skyblue;
+    font-size: 2em;
+}
