@@ -108,10 +108,16 @@
     font-style: italic;
 }
 
-h1 {
+h1,
+h2 {
     font-size: 3em !important;
     font-family: "Fira Sans Condensed", sans-serif;
     color: skyblue;
+}
+
+h2 {
+    font-size: 1em !important;
+    font-weight: bolder;
 }
 
 .mainTitle {
