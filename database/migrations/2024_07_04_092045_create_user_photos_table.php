@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_photos', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id');
+            $table->id();            
+            $table->unsignedBigInteger('user_id');            
             $table->string('photo');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

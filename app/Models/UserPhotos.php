@@ -14,4 +14,8 @@ class UserPhotos extends Model
         'user_id',
         'photo'
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

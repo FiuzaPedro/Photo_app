@@ -15,16 +15,44 @@
             </div>
         </div>
     </div>
-    <div class="p-4 dashboardContent">
-        <h2>Here you can download the specific files you will use to create your Album</h2> <hr class="mb-2">
-        <form action="#" method="get" enctype="multipart/form-data">
-            @csrf
-            <label for="photos">Upload photos (Max: 20 photos only) </label>
-            <input type="file" name="photos[]" id="photoUpload" multiple class="form-control">  
-            <div class="mt-2 ">
-                <button class="bg-orange-200">Upload</button>
-            </div>
-        </form>
+    <div class="p-4 dashboardContent">        
+        <div class="leftSide">
+            <h2>Here you can download the specific files you will use to create your Album</h2> <hr class="mb-2">
+            @if (session('status'))
+                <div class="success">{{session('status')}}</div>
+            @endif
+            @if (session('nostatus'))
+                <div class="fail">{{session('nostatus')}}</div>
+            @endif
+            @if ($errors->any())
+                <ul class="errorAlert">
+                    @foreach ($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
+            <form action="{{ url('userphotos/' . Auth::user()->id . '/upload') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <label for="photos">Upload photos (Max: 20 photos only) </label>
+                <input type="file" name="photos[]" id="photoUpload" multiple class="form-control">
+                <div class="mt-2">
+                    <button id="uploadBtn">Upload</button>
+                </div>
+            </form>
+        </div>
+        <div class="rightSide">
+            @if ($photoData !== null)
+                <h2>Available photos to edit</h2>
+                <hr>
+                <ul style="border: 1px solid white; padding: 10px">
+                    @foreach ($photoData as $photo )
+                        <li>{{$photo}}</li>
+                    @endforeach
+                </ul>
+            @endif
+            
+         
+        </div>
         
     </div>
     
