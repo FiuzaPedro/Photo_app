@@ -41,14 +41,21 @@
             </form>
         </div>
         <div class="rightSide">
-            @if ($photoData !== null)
+            
+            @if ($photoData !== null && sizeof($photoData) !== 0)
                 <h2>Available photos to edit</h2>
                 <hr>
-                <ul style="border: 1px solid white; padding: 10px">
-                    @foreach ($photoData as $photo )
-                        <li>{{$photo}}</li>
+                <ul style="border: 1px solid white; padding: 5px">
+                    @foreach ($photoData as $photo )                    
+                        <div class="divPreviews">
+                            <img class="preview" src="{{ asset($photo->photo)}}" alt="preview image">    
+                            <li>{{$photo->photo}}</li>                                                        
+                            <button class="btnDel"><a href="{{url('/delete/'. $photo->id  )}}">Delete</a></button>
+                        </div>
                     @endforeach
                 </ul>
+            @else
+                <h1>No photos uploaded yet</h1>
             @endif
             
          
