@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\UserPhotos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class UserPhotoController extends Controller
 {
     public function show() {
-        $photoData = UserPhotos::select('*')->get();
-        
+        $photoData = UserPhotos::select('*')->where('user_id', Auth::user()->id)->get();        
         return view('/dashboard', ['photoData' => $photoData]);
     }
     public function upload(Request $request, int $userId) {            
@@ -52,5 +52,12 @@ class UserPhotoController extends Controller
         }
         $photo->delete();
         return redirect()->back()->with('status', 'Photo Deleted');
+    }//end delete function
+
+
+    public function createAlbum(int $userId) {
+        $userPhotos = UserPhotos::all()->where('user_id', $userId);        
+
+        return view('userphotos/createalbum', ['userPhotos' => $userPhotos]);
     }
 }

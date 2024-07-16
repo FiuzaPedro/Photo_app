@@ -9,6 +9,7 @@
         <div > <!-- class="max-w-7xl mx-auto sm:px-6 lg:px-8" -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm ">
                 <div class="p-6 text-gray-900 dark:text-gray-100 dashboardWelcome">
+                <x-heroicon-s-camera style="height:80px; display:inline"/>
                     {{ __("Welcome to the Photo App ") }}
                     <span style="color:steelblue;">{{ Auth::user()->name }}</span>                        
                 </div>
@@ -40,20 +41,21 @@
                 </div>
             </form>
         </div>
-        <div class="rightSide">
-            
+        <div class="rightSide">        
             @if ($photoData !== null && sizeof($photoData) !== 0)
                 <h2>Available photos to edit</h2>
                 <hr>
-                <ul style="border: 1px solid white; padding: 5px">
+                <ul style="border: 1px solid white; padding: 5px; padding-bottom:20px">
                     @foreach ($photoData as $photo )                    
                         <div class="divPreviews">
                             <img class="preview" src="{{ asset($photo->photo)}}" alt="preview image">    
                             <li>{{$photo->photo}}</li>                                                        
                             <button class="btnDel"><a href="{{url('/delete/'. $photo->id  )}}">Delete</a></button>
                         </div>
-                    @endforeach
+                    @endforeach                    
+                    <a href="{{url('/userphotos/createalbum/' . Auth::user()->id . '/')}}" class="createAlbumLink">Create Album</a>
                 </ul>
+                
             @else
                 <h1>No photos uploaded yet</h1>
             @endif

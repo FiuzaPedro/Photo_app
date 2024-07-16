@@ -1,11 +1,20 @@
 @import url('welcome.css');
 
+a,
+button,
+img,
+.divPreviews {
+    transition: 0.5s ease-in-out all !important;
+}
+
 .dashboard {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav a {
-    border-bottom-color: white !important;
+    border-bottom-color: skyblue !important;
+    background-color: steelblue;
+    color: white !important;
 }
 
 button,
@@ -19,7 +28,6 @@ button * {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 10px 0 5px white;
-    transition: 0.5s ease-in-out all;
 }
 
 #uploadBtn:hover {
@@ -74,7 +82,6 @@ input {
     border-radius: 100%;
     height: 50px !important;
     width: 50px !important;
-    transition: 0.3s ease-in-out all;
 }
 
 .preview:hover {
@@ -87,11 +94,23 @@ input {
     border-radius: 10px;
     color: red !important;
     border: 1px solid red;
-    transition: 0.4s ease-in-out all;
 }
 
 .btnDel a:hover {
     background-color: red !important;
+    color: white !important;
+}
+
+.createAlbumLink {
+    width: 100%;
+    padding: 10px;
+    background-color: white !important;
+    color: steelblue !important;
+    border-radius: 10px;
+}
+
+.createAlbumLink:hover {
+    background-color: skyblue !important;
     color: white !important;
 }
 

@@ -1,0 +1,86 @@
+.photoList {
+    background-color: skyblue;
+}
+
+.photoList {
+    display: flex;
+}
+
+li img {
+    height: 100px;
+    cursor: pointer;
+}
+
+.albumContainer {
+    background-color: skyblue;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.leftPage,
+.rightPage {
+    width: 45%;
+    background-color: whitesmoke;
+    padding: 5px;
+    text-align: center;
+    height: 500px;
+}
+
+.center {
+    width: 10px;
+    background-color: peachpuff;
+}
+
+.bigImg {
+    height: 100%;
+    width: 100%;
+    background-color: steelblue;
+}
+
+.galleryItem1 {
+    grid-area: image1;
+}
+
+.galleryItem2 {
+    grid-area: image2;
+}
+
+.galleryItem3 {
+    grid-area: image3;
+}
+
+.galleryItem4 {
+    grid-area: image4;
+}
+
+.galleryItem5 {
+    grid-area: image5;
+}
+
+.sideGallery {
+    border: 2px solid steelblue;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        'image1 . image2'
+        '. image3 .'
+        'image4 . image5'
+    ;
+    gap: 5px;
+    padding: 5px;
+}
+
+.sideGallery div {
+    border: 2px solid skyblue;
+    /* height: 100px;
+    width: 100px; */
+
+}
+
+.galleryItem3 {
+    scale: 1.8;
+    z-index: 9;
+    background-color: skyblue;
+}
