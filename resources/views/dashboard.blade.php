@@ -45,7 +45,7 @@
             @if ($photoData !== null && sizeof($photoData) !== 0)
                 <h2>Available photos to edit</h2>
                 <hr>
-                <ul style="border: 1px solid white; padding: 5px; padding-bottom:20px">
+                <ul class="itemUl">
                     @foreach ($photoData as $photo )                    
                         <div class="divPreviews">
                             <img class="preview" src="{{ asset($photo->photo)}}" alt="preview image">    
@@ -53,9 +53,8 @@
                             <button class="btnDel"><a href="{{url('/delete/'. $photo->id  )}}">Delete</a></button>
                         </div>
                     @endforeach                    
-                    <a href="{{url('/userphotos/createalbum/' . Auth::user()->id . '/')}}" class="createAlbumLink">Create Album</a>
                 </ul>
-                
+                <div class="linkItem"><a href="{{url('/userphotos/createalbum/' . Auth::user()->id . '/')}}" class="createAlbumLink">Create Album</a></div>
             @else
                 <h1>No photos uploaded yet</h1>
             @endif

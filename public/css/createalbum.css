@@ -1,9 +1,20 @@
+@import url('welcome.css');
+
 .photoList {
-    background-color: skyblue;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .photoList {
     display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+
+    padding: 10px 0;
+}
+
+.photoList li {
+    margin: 0 5px;
 }
 
 li img {
@@ -16,20 +27,20 @@ li img {
     margin-top: 1%;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .leftPage,
 .rightPage {
     width: 45%;
     background-color: whitesmoke;
-    padding: 5px;
+    /* padding: 5px; */
     text-align: center;
     height: 500px;
 }
 
 .center {
     width: 10px;
-    background-color: peachpuff;
 }
 
 .bigImg {
@@ -59,7 +70,7 @@ li img {
 }
 
 .sideGallery {
-    border: 2px solid steelblue;
+    /* border: 2px solid steelblue; */
     display: grid;
     height: 100%;
     width: 100%;
@@ -83,4 +94,37 @@ li img {
     scale: 1.8;
     z-index: 9;
     background-color: skyblue;
+}
+
+.items {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sideBar {
+    background-color: white;
+    /* position: fixed;
+    left: 0; */
+    padding: 10px;
+    height: auto;
+    width: 100px;
+    /* margin-top: 16px; */
+}
+
+h3 {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 1.2em;
+    color: steelblue;
+}
+
+.icons {
+    height: 50px;
+    margin: 0 auto;
+    color: steelblue;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.newPage:hover {
+    color: goldenrod;
 }
