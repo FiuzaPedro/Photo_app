@@ -60,8 +60,13 @@
             @endif
             
          
-        </div>
-        
+        </div>        
     </div>
-    
+
+
+    <div class="modalPreview">        
+        <!-- <img id="previewLarge" src="{{ asset('./img/tigerbarposter.jpg')}}" alt="previewLarge"> -->
+        <x-heroicon-s-x-mark id="closePreview" class="icons" />
+    </div>
+    <script src="{{ asset('./js/dashboard.js')}}"></script>    
 </x-app-layout>

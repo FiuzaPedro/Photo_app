@@ -49,6 +49,8 @@
     }
     document.addEventListener('DOMContentLoaded', function () {
         //this gets the reference of the last id in the gallery items to put upon creating new album page
-        console.log(document.getElementsByClassName('items').length)
+        console.log(document.getElementsByClassName('items').length)        
     })
+   
+
 </script>
