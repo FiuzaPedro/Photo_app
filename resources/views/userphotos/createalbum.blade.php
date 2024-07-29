@@ -8,14 +8,15 @@
         @endforeach
     </ul>
     
-    <div class="albumContainer">
+    
     <div class="sideBar">
         <h3>Add page</h3>
         <x-heroicon-s-document id="newPage" class="icons" />                
         <h3>Print page</h3>
         <x-heroicon-s-printer id="printPage" class="icons" />        
     </div>
-        <div class="leftPage">
+    <div id="albumContainer" class="albumContainer"></div>
+        <!-- <div class="leftPage">
             <div id="item1" class="bigImg items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
         <div class="center"></div>        
@@ -27,11 +28,27 @@
                 <div id="item5" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem4"></div>
                 <div id="item6" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem5"></div>
             </div>
-        </div>
-    </div>
-
+        </div> -->
     
+    <div class="pages">
+    </div>
+    <div id="modalPageType"> &nbsp;        
+        <h3 class="h3Pages"><span style=" margin-top: 10px; font-weight:bold">Choose your page style:</span></h3>
+        <table>
+            <tr>
+                <td id="pageStyle1">1</td>                
+            </tr>            
+            <tr>
+                <td id="pageStyle2">2</td>                
+            </tr>            
+            <tr>
+                <td id="pageStyle3">3</td>                
+            </tr>
+        </table>
+        <x-heroicon-s-x-mark id="closeModal" class="icons iconClose" />
+    </div>
 </x-app-layout>
+
 <script>
     function allowDrop(ev) {
         ev.preventDefault();
@@ -54,3 +71,4 @@
    
 
 </script>
+<script src="{{ asset('./js/createalbum.js')}}"></script> 

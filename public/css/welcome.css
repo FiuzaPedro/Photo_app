@@ -122,11 +122,21 @@ h2 {
 
 .mainTitle {
     margin-top: -200px !important;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid steelblue;
 }
 
 body,
 .loginDiv {
     background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.welcomeDiv {
+    background-image: url('../img/mainpicture.jpg') !important;
+    /* Photo by Tirachard Kumtanom: https://www.pexels.com/photo/black-and-silver-film-camera-on-brown-wooden-surface-733853/ */
+    background-size: cover !important;
 }
 
 .navWelcome {
