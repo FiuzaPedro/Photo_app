@@ -1,0 +1,81 @@
+.galleryContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1% 0;
+    margin-right: 30px;
+}
+
+.galleryItem1 {
+    grid-area: pos1;
+}
+
+.galleryItem2 {
+    grid-area: pos2;
+}
+
+.galleryItem3 {
+    grid-area: pos3;
+}
+
+.galleryItem4 {
+    grid-area: pos4;
+}
+
+.galleryItem5 {
+    grid-area: pos5;
+}
+
+.galleryItem6 {
+    grid-area: pos6;
+}
+
+.galleryItem7 {
+    grid-area: pos7;
+}
+
+.galleryItem8 {
+    grid-area: pos8;
+}
+
+.galleryItem9 {
+    grid-area: pos9;
+}
+
+.pageOne,
+.pageTwo,
+.pageThree {
+    display: grid;
+    height: 600px;
+    width: 90%;
+    gap: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+.pageOne {
+    grid-template-areas:
+        '. pos1 .'
+        '. pos2 .'
+    ;
+}
+
+.pageTwo {
+    grid-template-areas:
+        '. pos1 pos4 .'
+        '. pos2 pos5 .'
+    ;
+}
+
+.pageThree {
+    grid-template-areas:
+        '. pos1 pos4 pos7 .'
+        '. pos2 pos5 pos8 .'
+        '. pos3 pos6 pos9 .'
+    ;
+}
+
+.items {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid steelblue;
+}

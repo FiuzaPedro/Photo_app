@@ -36,13 +36,19 @@
         <h3 class="h3Pages"><span style=" margin-top: 10px; font-weight:bold">Choose your page style:</span></h3>
         <table>
             <tr>
-                <td id="pageStyle1">1</td>                
+                <td id="pageStyle1">
+                    <!-- <img src="{{ asset('./img/pagestyles/2rows.JPG')}}" alt=""> -->
+                </td>                
             </tr>            
             <tr>
-                <td id="pageStyle2">2</td>                
+                <td id="pageStyle2">
+                    <!-- <img src="{{ asset('./img/pagestyles/2cols2rows.JPG')}}"> -->
+                </td>                
             </tr>            
             <tr>
-                <td id="pageStyle3">3</td>                
+                <td id="pageStyle3">
+                    <!-- <img src="{{ asset('./img/pagestyles/3cols3rows.JPG')}}"> -->
+            </td>                
             </tr>
         </table>
         <x-heroicon-s-x-mark id="closeModal" class="icons iconClose" />
@@ -63,12 +69,6 @@
         var data = ev.dataTransfer.getData("text");
         let imgSrc = document.getElementById(data).getAttribute('src');                
         document.getElementById(ev.target.id).style.backgroundImage = `url(${imgSrc})`;
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-        //this gets the reference of the last id in the gallery items to put upon creating new album page
-        console.log(document.getElementsByClassName('items').length)        
-    })
-   
-
+    }    
 </script>
 <script src="{{ asset('./js/createalbum.js')}}"></script> 

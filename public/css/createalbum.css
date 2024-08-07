@@ -35,75 +35,13 @@ li img {
     height: 100%;
 }
 
-.galleryContainer {
-    display: flex;
-    justify-content: flex-end;
-    margin: 1% 0;
-    margin-right: 30px;
-}
 
-.leftPage,
-.rightPage {
-    width: 45%;
-    background-color: whitesmoke;
-    text-align: center;
-    height: 500px;
-}
-
-.bigImg {
-    height: 100%;
-    width: 100%;
-    background-color: steelblue
-}
-
-.center {
-    width: 10px;
-}
-
-.galleryItem1 {
-    grid-area: image1;
-}
-
-.galleryItem2 {
-    grid-area: image2;
-}
-
-.galleryItem3 {
-    grid-area: image3;
-}
-
-.galleryItem4 {
-    grid-area: image4;
-}
-
-.galleryItem5 {
-    grid-area: image5;
-}
-
-.galleryOne {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-areas:
-        'image1 . image2'
-        '. image3 .'
-        'image4 . image5'
-    ;
-    gap: 5px;
-    padding: 5px;
-}
-
-.items {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    border: 1px solid steelblue;
-}
 
 .sideBar {
     background-color: white;
     position: fixed;
     left: 0;
-    top: 30%;
+    top: 33%;
     padding: 10px;
     width: 100px;
     /* margin-top: 16px; */
@@ -135,7 +73,7 @@ h3 {
 .pages {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    /* height: 600px; */
     max-height: 100%;
     background-color: skyblue;
     overflow-y: scroll;
@@ -151,6 +89,9 @@ h3 {
     width: 50%;
     z-index: 99999;
     display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
 }
 
 .iconClose {
@@ -172,6 +113,27 @@ tr,
 td {
     border: 1px solid steelblue;
     transition: 0.4s ease-in-out all;
+}
+
+#pageStyle1,
+#pageStyle2,
+#pageStyle3 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 50px;
+}
+
+#pageStyle1 {
+    background-image: url('../img/pagestyles/2rows.JPG');
+}
+
+#pageStyle2 {
+    background-image: url('../img/pagestyles/2cols2rows.JPG');
+}
+
+#pageStyle3 {
+    background-image: url('../img/pagestyles/3cols3rows.JPG');
 }
 
 td:hover {
