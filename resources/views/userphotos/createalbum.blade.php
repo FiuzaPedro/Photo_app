@@ -14,22 +14,15 @@
         <x-heroicon-s-document id="newPage" class="icons" />                
         <h3>Print page</h3>
         <x-heroicon-s-printer id="printPage" class="icons" />        
+        <h3>Save page</h3>
+        <x-heroicon-c-cloud-arrow-down id="savePage" class="icons" />        
     </div>
-    <div id="albumContainer" class="albumContainer"></div>
-        <!-- <div class="leftPage">
-            <div id="item1" class="bigImg items" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <form method="POST" id="frmAlbum" action="{{ url('savealbum/' . Auth::user()->id ) }}" style="padding:0; margin:0">
+        @csrf
+        <div id="albumContainer" class="albumContainer">            
         </div>
-        <div class="center"></div>        
-        <div class="rightPage">
-            <div class="sideGallery">
-                <div id="item2" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem1"></div>
-                <div id="item3" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem2"></div>
-                <div id="item4" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem3"></div>
-                <div id="item5" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem4"></div>
-                <div id="item6" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem5"></div>
-            </div>
-        </div> -->
-    
+    </form>
+        
     <div class="pages">
     </div>
     <div id="modalPageType"> &nbsp;        

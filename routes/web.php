@@ -16,6 +16,7 @@ Route::post('/userphotos/{userId}/upload', [UserPhotoController::class, 'upload'
 Route::get('/dashboard', [UserPhotoController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/userphotos/createalbum/{userId}', [UserPhotoController::class, 'createAlbum'])->middleware(['auth', 'verified'])->name('createAlbum');
 Route::get('/delete/{photoId}', [UserPhotoController::class, 'delete'])->name('photo.delete');
+Route::post('/savealbum/{userId}', [UserPhotoController::class, 'saveAlbum'])->middleware(['auth', 'verified'])->name('saveAlbum');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

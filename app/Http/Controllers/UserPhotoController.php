@@ -60,4 +60,9 @@ class UserPhotoController extends Controller
 
         return view('userphotos/createalbum', ['userPhotos' => $userPhotos]);
     }
+
+    public function saveAlbum(int $userId, Request $request) { 
+        dd($request);
+        return redirect('userphotos/createalbum/' . $userId);        
+    }
 }

@@ -36,10 +36,19 @@ $('td').each(function () {
                 for (let i = currentLength - numberOfIds; i < document.getElementsByClassName('items').length; i++) {
                     document.getElementsByClassName('items')[i].setAttribute('id', 'item' + i);
                 }
-
             }
         });
         $("#modalPageType").slideUp(200);
+
+        setTimeout(() => {
+            $('html, body').stop().animate({ scrollTop: "+=600px" }, 400);
+        }, 500);
+
+
     })
 
+})
+
+$("#savePage").click(function () {
+    $('#frmAlbum').submit();
 })
