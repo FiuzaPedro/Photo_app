@@ -1,7 +1,7 @@
-<x-app-layout>
+<x-app-layout>    
     <h2 style="background-color: steelblue;">&nbsp;Create your album <span style="color:white">{{Auth::user()->name}}</span></h2>
     <ul class="photoList">
-        @foreach ($userPhotos as $photo)        
+        @foreach ($userData['userPhotos'] as $photo)        
             <li>
                 <img id="{{'img' . $photo->id}}" src="{{ asset($photo->photo)}}" alt="preview image" draggable="true" ondragstart="drag(event)">
             </li>
@@ -17,9 +17,13 @@
         <h3>Save page</h3>
         <x-heroicon-c-cloud-arrow-down id="savePage" class="icons" />        
     </div>
-    <form method="POST" id="frmAlbum" action="{{ url('savealbum/' . Auth::user()->id ) }}" style="padding:0; margin:0">
+    <form method="POST" id="frmAlbum"  style="padding:0; margin:0"> <!-- action="{{ url('savealbum/' . Auth::user()->id ) }}" -->
         @csrf
-        <div id="albumContainer" class="albumContainer">            
+        <textarea name="htmlContent" id="html"></textarea>
+        <div id="albumContainer" class="albumContainer" data-id = '{{ Auth::user()->id}}'>  
+            @if( isset($userData['userAlbum'] ) )
+             {!! $userData['userAlbum'][0] !!}
+            @endif
         </div>
     </form>
         

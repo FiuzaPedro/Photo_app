@@ -56,13 +56,26 @@ class UserPhotoController extends Controller
 
 
     public function createAlbum(int $userId) {
-        $userPhotos = UserPhotos::all()->where('user_id', $userId);        
-
-        return view('userphotos/createalbum', ['userPhotos' => $userPhotos]);
+        $userPhotos = UserPhotos::all()->where('user_id', $userId);
+        $userAlbum = User::select('album')->where('id', $userId)->pluck('album')->all();
+        // dd($userAlbum);
+        $userData = [
+            'userPhotos' => $userPhotos,
+            'userAlbum' => $userAlbum
+        ];
+        return view('userphotos/createalbum', ['userData' => $userData]);
     }
 
-    public function saveAlbum(int $userId, Request $request) { 
-        dd($request);
-        return redirect('userphotos/createalbum/' . $userId);        
+    public function saveAlbum(int $userId, Request $request) {         
+        if($request->htmlContent) {
+            $currentUser = User::find($userId); 
+            $currentUser->album = $request->htmlContent;
+            $currentUser->save();
+        } else {
+            return redirect()->back()->with('nostatus', 'No content to save');
+        }
+        
+        return redirect('userphotos/createalbum/' . $userId)->with(['userAlbum' => $currentUser->album]);        
+        // return redirect()->back()->with(['userAlbum' => $currentUser->album]);
     }
 }

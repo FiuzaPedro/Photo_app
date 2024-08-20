@@ -50,5 +50,15 @@ $('td').each(function () {
 })
 
 $("#savePage").click(function () {
-    $('#frmAlbum').submit();
+    let id = document.getElementById('albumContainer').dataset.id;
+    let albumHTML = $('#albumContainer').html();
+    $('#html').css({
+        visibility: 'visible',
+        opacity: 1
+    })
+    setTimeout(() => {
+        $('#html').val(albumHTML);
+        $('#frmAlbum').attr('action', window.location.protocol + "//" + window.location.host + "/photoalbum_app/public/userphotos/savealbum/" + id);
+        $('#frmAlbum').submit();
+    }, 500);
 })
