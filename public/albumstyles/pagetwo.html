@@ -1,8 +1,33 @@
+<style>
+    .pageTwo {
+        position: relative;
+    }
+
+    .btnDelete {
+        background-color: white !important;
+        color: red !important;
+        border: 1px solid red;
+        height: 40px;
+        position: absolute;
+        top: 5%;
+        left: 81%;
+        width: 200px;
+        transition: 0.3s ease-in-out all;
+        padding: 5px 10px !important;
+        border-radius: 10px !important;
+    }
+
+    .btnDelete:hover {
+        background-color: red !important;
+        color: white !important;
+    }
+</style>
 <div class="galleryContainer">
     <div class="pageTwo">
         <div id="item1" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem1"></div>
         <div id="item2" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem2"></div>
         <div id="item4" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem4"></div>
         <div id="item5" ondrop="drop(event)" ondragover="allowDrop(event)" class="items galleryItem5"></div>
+        <button class="btnDelete">Delete this page</button>
     </div>
 </div>
