@@ -67,5 +67,11 @@
         let imgSrc = document.getElementById(data).getAttribute('src');                
         document.getElementById(ev.target.id).style.backgroundImage = `url(${imgSrc})`;
     }    
+    function deletePage(event) {        
+        event.preventDefault();
+        // console.log(event.target.parentNode.parentNode);
+        let selectedPage = event.target.parentNode.parentNode;
+        selectedPage.remove();
+    }
 </script>
 <script src="{{ asset('./js/createalbum.js')}}"></script> 
