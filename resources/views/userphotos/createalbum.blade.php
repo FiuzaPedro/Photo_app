@@ -8,11 +8,16 @@
         @endforeach
     </ul>
     
-    
+    <div id="loader" class=" text-primary">
+        <div class="loaderContent">
+            <div class="spinner-border text-primary"></div>
+            <h1 style="width: 100%" class="h2 text-primary">Please Wait! PDF is being created, it may take a while...</h1>
+        </div>
+    </div>
     <div class="sideBar">
         <h3>Add page</h3>
         <x-heroicon-s-document id="newPage" class="icons" />                
-        <h3>Print page</h3>
+        <h3>Print album</h3>
         <x-heroicon-s-printer id="printPage" class="icons" />        
         <h3>Save page</h3>
         <x-heroicon-c-cloud-arrow-down id="savePage" class="icons" />        
