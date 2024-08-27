@@ -68,6 +68,10 @@ $('#printPage').click(function () {
 })
 
 async function Convert_HTML_To_PDF() {
+    if ($('.btnDelete').length === 0) {
+        alert('No Album Pages to print')
+        return;
+    }
     const loader = document.getElementById('loader')
     loader.style.display = 'block';
     let allDels = $('.btnDelete');
@@ -75,23 +79,32 @@ async function Convert_HTML_To_PDF() {
         $(this).hide();
     })
     var pages = document.getElementById('albumContainer');
-
+    $('.galleryContainer').css({
+        justifyContent: 'center',
+        marginRight: 0
+    })
     const pdf = await html2PDF(pages, {
         jsPDF: {
             format: 'a4',
-            orientation: 'portrait'
+            orientation: 'landscape'
         },
         margin: {
-            top: 5,
-            right: 10,
-            bottom: 5,
-            left: 10,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
         },
         output: 'album.pdf'
     });
 
+
     loader.style.display = 'none';
     setTimeout(() => {
         allDels.show(100);
+        $('.galleryContainer').css({
+            justifyContent: 'flex-end',
+            marginRight: '30px'
+        })
     }, 1000);
+
 }//end ConvertHTMLtoPDF function 

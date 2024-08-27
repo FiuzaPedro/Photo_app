@@ -3,6 +3,7 @@
     justify-content: flex-end;
     margin: 1% 0;
     margin-right: 30px;
+    align-items: center;
 }
 
 .galleryItem1 {
@@ -45,7 +46,7 @@
 .pageTwo,
 .pageThree {
     display: grid;
-    height: 600px;
+    height: 950px;
     width: 90%;
     gap: 5px;
     padding: 5px;

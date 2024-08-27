@@ -150,6 +150,10 @@ td:hover {
     opacity: 0;
 }
 
+.galleryContainer {
+    height: 1093px;
+}
+
 /* loader styles */
 #loader {
     display: none;
