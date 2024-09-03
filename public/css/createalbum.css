@@ -1,8 +1,8 @@
 @import url('welcome.css');
 
 main {
-    background-color: skyblue;
-    background-color: black !important;
+    /* background-color: skyblue;
+    background-color: rgba(0, 0, 0, 0.6) !important; */
 }
 
 .photoList {
@@ -99,7 +99,7 @@ h3 {
     margin: 0 0 0 auto !important;
 }
 
-/* testing table styles */
+/*  table styles */
 .h3Pages {
     width: 30%;
 }
@@ -152,6 +152,31 @@ td:hover {
 
 .galleryContainer {
     height: 1093px;
+}
+
+.pageOne,
+.pageTwo,
+.pageThree {
+    position: relative;
+}
+
+.btnDelete {
+    background-color: white !important;
+    color: red !important;
+    border: 1px solid red;
+    height: 40px;
+    position: absolute;
+    top: 5%;
+    left: 81%;
+    width: 200px;
+    transition: 0.3s ease-in-out all;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+}
+
+.btnDelete:hover {
+    background-color: red !important;
+    color: white !important;
 }
 
 /* loader styles */

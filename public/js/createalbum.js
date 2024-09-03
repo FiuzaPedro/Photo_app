@@ -41,7 +41,8 @@ $('td').each(function () {
         $("#modalPageType").slideUp(200);
 
         setTimeout(() => {
-            $('html, body').stop().animate({ scrollTop: "+=600px" }, 400);
+            let lastGalleryPosition = $('.galleryContainer').last().offset().top - 100;
+            $('html, body').stop().animate({ scrollTop: lastGalleryPosition }, 400);
         }, 500);
 
 

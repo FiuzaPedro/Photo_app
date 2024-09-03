@@ -22,7 +22,7 @@
         <h3>Save page</h3>
         <x-heroicon-c-cloud-arrow-down id="savePage" class="icons" />        
     </div>
-    <form method="POST" id="frmAlbum"  style="padding:0; margin:0"> <!-- action="{{ url('savealbum/' . Auth::user()->id ) }}" -->
+    <form method="POST" id="frmAlbum"  style="padding:0; margin:0; "> <!-- action="{{ url('savealbum/' . Auth::user()->id ) }}" -->
         @csrf
         <textarea name="htmlContent" id="html"></textarea>
         <div id="albumContainer" class="albumContainer" data-id = '{{ Auth::user()->id}}'>  

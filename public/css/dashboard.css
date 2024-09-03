@@ -105,12 +105,12 @@ input {
     background-color: white !important;
     padding: 10px;
     border-radius: 10px;
-    color: red !important;
-    border: 1px solid red;
+    color: steelblue !important;
+    border: 1px solid steelblue;
 }
 
 .btnDel a:hover {
-    background-color: red !important;
+    background-color: steelblue !important;
     color: white !important;
 }
 
